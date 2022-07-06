@@ -1,25 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Accordion from "./components/Accordion";
 
-function App() {
+const items = [
+  {
+    title: "what is html ?",
+    content: "HTML, in full hypertext markup language",
+  },
+
+  {
+    title: "what is css ?",
+    content:
+      "CSS (Cascading Style Sheets) is one of two of the core technologies for building Web pages",
+  },
+
+  {
+    title: "what is javascript ?",
+    content:
+      "JavaScript is a text-based programming language used both on the client-side and server-side",
+  },
+
+  {
+    title: "what is react ?",
+    content:
+      "React is a JavaScript library developed by Facebook,  Its aim is to allow developers to easily create fast user interfaces for websites and applications alike",
+  },
+];
+
+export default () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Accordion items={items} />
+    </>
   );
-}
-
-export default App;
+};
